@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,5 +27,11 @@ public class MainActivity extends AppCompatActivity {
     public void changeText(View v) {
        TextView myView = findViewById(R.id.HelloWorld);
        myView.setText("Goodbye...");
+    }
+
+    public void handleTextView(View v) {
+        EditText text = findViewById(R.id.nameTextField);
+        String input = text.getText().toString();
+        Log.d("info", input);
     }
 }
